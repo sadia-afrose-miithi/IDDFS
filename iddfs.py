@@ -20,13 +20,13 @@ class IterativeDeepening:
             self.depthLimitedSearch(grid, start, target, visited)
 
             if self.goalFound:
-                print("\nPath found at depth", self.maxDepth, "using IDDFS")
-                print("Traversal Order:", self.finalPath)
+                print(f"Path found at depth {self.maxDepth} using IDDFS")
+print(f"Traversal Order: {self.finalPath}")
                 return True
 
             self.maxDepth += 1
 
-        print("\nPath not found at max depth", maxDepthLimit, "using IDDFS")
+        print(f"Path not found at max depth {maxDepthLimit} using IDDFS")
         return False
 
     def depthLimitedSearch(self, grid, source, goal, visited):
